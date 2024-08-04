@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="gradient"></div>
+    <div class="particles"></div>
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <form id="registrationForm">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-user"></i> Full Name</span>
+                    <input type="text" id="fullName" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-user-tag"></i> Username</span>
+                    <input type="text" id="username" placeholder="Choose a username" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-envelope"></i> Email</span>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-phone-alt"></i> Phone Number</span>
+                    <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+                </div>
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-map-marker-alt"></i> Address</span>
+                    <input type="text" id="address" placeholder="Enter your address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"><i class="fas fa-image"></i> Profile Picture</span>
+                    <input type="file" id="profilePicture" accept="image/*">
+                    <div id="profilePreview"></div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Skills</span>
+                    <div class="skills">
+                        <label><input type="checkbox" name="skills" value="Programming"> Programming</label>
+                        <label><input type="checkbox" name="skills" value="Design"> Design</label>
+                        <label><input type="checkbox" name="skills" value="Writing"> Writing</label>
+                        <label><input type="checkbox" name="skills" value="Marketing"> Marketing</label>
+                        <label><input type="checkbox" name="skills" value="Management"> Management</label>
+                    </div>
+                </div>
+            </div>
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        <span class="dot"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        <span class="dot"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Prefer Not To Say">
+                        <span class="dot"></span>
+                        <span class="gender">Prefer Not To Say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        <div id="completionMessage" style="display: none;">
+            <h1>Registration Completed!</h1>
+            <p>Thank you for registering!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

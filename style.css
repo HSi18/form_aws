@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 90vh; 
+}
+
+.title {
+  font-size: 30px; 
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.user-details, .gender-details {
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight:300;
+}
+
+.skills input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.gender-details .category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.gender-details .category input[type="radio"] {
+  margin-right: 10px;
+}
+
+.button input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #5f76e6;
+  color: #fff;
+  font-size: 16px;
+}
+
+.button input:hover {
+  background: #4b5bdc;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatParticles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
+
+#gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #e66465, #9198e5, #5f76e6, #e66465);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  z-index: -1;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: floatParticles 20s linear infinite;
+}
+
+.particle.small {
+  width: 4px;
+  height: 4px;
+  animation-duration: 10s;
+}
+
+.particle.medium {
+  width: 8px;
+  height: 8px;
+  animation-duration: 20s;
+}
+
+.particle.large {
+  width: 12px;
+  height: 12px;
+  animation-duration: 30s;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    flex-direction: column; 
+  }
+}
